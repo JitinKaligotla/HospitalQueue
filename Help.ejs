@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Help</title>
+</head>
+<body>
+    <form action = "/addhelp"  method="POST">
+        <div>
+        <label for = "title"> Enter your Title</label>
+        <input id = 'title' type = "text"  placeholder="Title of your"  name ="title" >
+        </div>
+        <div>
+        <label for = "category"> Enter your Category</label>
+        <input id = 'category' type = "text"  placeholder="Title of your" name="category">
+        </div>
+        <label for = "Tags"> Enter your Details</label>
+        <input id = 'Tags' type = "text"  placeholder="Title of your" name="Tags">
+        <div>
+        <label for = "urgencylevel"> Your urgency Level</label>
+        <select id = "urgencylevel" name="urgencylevel">
+        <option value="High" >High</option>
+        <option value="low" >Low</option>
+        <option value="medium" >medium</option>
+        </select>
+        </div>
+        <div>
+            <label for = "location"> Location</label>
+            <input id = 'location' type = "text"  placeholder="Title of your" name="location" >
+        </div>
+        <div>
+            <button type = "submit">Submit Help</button>
+        </div>
+    </form>
+    
+</body>
+</html>

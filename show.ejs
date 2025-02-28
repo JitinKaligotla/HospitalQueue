@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show</title>
+</head>
+<body>
+    <h1>Showing</h1>
+
+    <% for (let find of finds) { %>  
+        <h3>Title: <%= find.title %></h3>  
+        <h3>Location: <%= find.location %></h3>  
+        <h3>Urgency Level: <%= find.urgencylevel %></h3>  
+        <h3>Tags: <%= find.Tags %></h3>  
+        <div>
+            <% if (User && find.user && String(User._id) === String(find.user._id)) { %>
+            <form action="/help/<%= find._id %>/edit">
+                <button type="submit">Edit the help</button>
+            </form>
+            </div>
+            <div>
+            <form action="/help/<%= find._id %>/delete?_method=DELETE" method="POST">
+                <button type="submit">DELETE</button>
+            </form>
+            </div>
+            <% } %>
+        <hr>
+    <% } %>
+    
+
+</body>
+</html>
